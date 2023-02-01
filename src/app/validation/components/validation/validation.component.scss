@@ -1,0 +1,23 @@
+.validation {
+  width: 100%;
+
+  display: block;
+  margin-top: 20px;
+}
+
+.validation__text {
+  font-size: 12px;
+  color: #e1e1e1;
+}
+
+.validation__text--danger {
+  color: #ff0000;
+}
+
+.validation__text--warning {
+  color: #ffd900;
+}
+
+.validation__text--success {
+  color: #47e819;
+}
