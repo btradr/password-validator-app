@@ -3,21 +3,23 @@
 
   display: block;
   margin-top: 20px;
-}
 
-.validation__text {
-  font-size: 12px;
-  color: #e1e1e1;
-}
 
-.validation__text--danger {
-  color: #ff0000;
-}
+  &__text {
+    font-size: 12px;
+    color: #e1e1e1;
 
-.validation__text--warning {
-  color: #ffd900;
-}
 
-.validation__text--success {
-  color: #47e819;
+    &--danger {
+      color: #ff0000;
+    }
+
+    &--warning {
+      color: #ffd900;
+    }
+
+    &--success {
+      color: #47e819;
+    }
+  }
 }

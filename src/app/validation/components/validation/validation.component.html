@@ -1,14 +1,29 @@
 <div class="validation" *ngIf="control.dirty && controlError">
-  <p class="validation__text">
-    The password must contain at least 10 characters!
-  </p><!-- /.validation__text -->
-  <p class="validation__text validation__text--danger">
+  <p
+    class="validation__text"
+    [ngClass]="{
+      'validation__text--danger': passwordStrength === 'simple',
+      'validation__text--warning': passwordStrength === 'medium',
+      'validation__text--success': passwordStrength === 'strong'
+    }"
+  >
     The password is simple!
   </p><!-- /.validation__text -->
-  <p class="validation__text validation__text--warning">
+  <p
+    class="validation__text"
+    [ngClass]="{
+      'validation__text--warning': passwordStrength === 'medium',
+      'validation__text--success': passwordStrength === 'strong'
+    }"
+  >
     The password is medium!
   </p><!-- /.validation__text -->
-  <p class="validation__text validation__text--success">
+  <p
+    class="validation__text"
+    [ngClass]="{
+      'validation__text--success': passwordStrength === 'strong'
+    }"
+  >
     The password is strong!
   </p><!-- /.validation__text -->
 </div>
