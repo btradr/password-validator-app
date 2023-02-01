@@ -1,4 +1,4 @@
-<div class="validation">
+<div class="validation" *ngIf="control.dirty && controlError">
   <p class="validation__text">
     The password must contain at least 10 characters!
   </p><!-- /.validation__text -->

@@ -10,7 +10,7 @@
     <label for="password" class="form__label">Password</label>
     <input id="password" type="password" placeholder="Password" class="form__input" formControlName="password">
 
-    <app-validation></app-validation>
+    <app-validation [control]="loginForm.get('password')"></app-validation>
   </div><!-- /.form__control -->
 
   <button type="submit" class="form__btn" [disabled]="loginForm.invalid">Submit</button>
