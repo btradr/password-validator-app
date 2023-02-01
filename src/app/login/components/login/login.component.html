@@ -1,16 +1,17 @@
-<form class="form">
+<form class="form" [formGroup]="loginForm" (ngSubmit)="submitForm()">
   <h2 class="form__header">Sign in</h2>
+
   <div class="form__control">
-    <label for="login" class="form__label">Login</label>
-    <input id="login" type="email" name="email" placeholder="Email" class="form__input">
-  </div>
+    <label for="email" class="form__label">Login</label>
+    <input id="email" type="email" placeholder="Email" class="form__input" formControlName="email">
+  </div><!-- /.form__control -->
+
   <div class="form__control">
     <label for="password" class="form__label">Password</label>
-    <input id="password" type="password" name="password" placeholder="Password" class="form__input">
-  </div>
+    <input id="password" type="password" placeholder="Password" class="form__input" formControlName="password">
 
-  <app-validation></app-validation>
+    <app-validation></app-validation>
+  </div><!-- /.form__control -->
 
-  <button type="submit" class="form__btn">Submit</button>
-  <button type="submit" class="form__btn form__btn--disabled" disabled>Submit</button>
+  <button type="submit" class="form__btn" [disabled]="loginForm.invalid">Submit</button>
 </form>

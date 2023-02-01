@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 
 // Components
 import { LoginComponent } from './components/login/login.component';
@@ -11,6 +12,7 @@ import { ValidationModule } from '../validation/validation.module';
   declarations: [LoginComponent],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     ValidationModule
   ],
   exports: [LoginComponent]
