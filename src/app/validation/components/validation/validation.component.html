@@ -12,6 +12,7 @@
   <p
     class="validation__text"
     [ngClass]="{
+      'validation__text--danger': control.errors,
       'validation__text--warning': passwordStrength === 'medium',
       'validation__text--success': passwordStrength === 'strong'
     }"
@@ -21,6 +22,7 @@
   <p
     class="validation__text"
     [ngClass]="{
+      'validation__text--danger': control.errors,
       'validation__text--success': passwordStrength === 'strong'
     }"
   >

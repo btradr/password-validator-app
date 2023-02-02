@@ -34,10 +34,6 @@ export class ValidationComponent implements OnInit, OnDestroy {
     this.control.valueChanges
       .pipe(takeUntil(this.destroy$))
       .subscribe((inputValue: string) => {
-        if (inputValue.length <= 8) {
-          return;
-        }
-
         if (inputValue.match(simplePattern)) {
           this.passwordStrength = 'simple';
         } else if (inputValue.match(mediumPattern)) {
